@@ -3,13 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spring Boot Demo</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <!--  Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <title>MonkeyStore</title>
+    <link rel="stylesheet" href="../static/styles.css" type="text/css">
 </head>
 <body>
-    <h1>Bienvenido a Spring Boot</h1>
-    <p>Esta es una página HTML estática servida por Spring Boot.</p>
-    <button id="P1">Presionar</button>
-    <h1 id="H1"></h1>
+    <section class="LgBase">
+        <section class="LgContainer">
+            <h1>Bienvenido user</h1>
+            <section class="LgInputsSection">
+                <input placeholder="Nombre">
+                <input placeholder="Contraseña">
+            </section>
+            
+            <section class="LgButtons">
+                <button>Continuar</button>
+                <button>Registrarse</button>
+            </section>
+        </section>
+    </section>
+    <!-- <h2>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
+    <h1 id="mensaje">Cargando...</h1>
+    <script>
+        // Llama al endpoint del backend
+        fetch('http://localhost:8080/hola')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('mensaje').textContent = data;
+            })
+            .catch(error => console.error('Errorrrrrrrr:', error));
+    </script> -->
 </body>
 </html>
