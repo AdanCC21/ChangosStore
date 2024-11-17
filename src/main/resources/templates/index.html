@@ -9,33 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <title>MonkeyStore</title>
-    <link rel="stylesheet" href="../static/styles.css" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
 </head>
 <body>
     <section class="LgBase">
+
         <section class="LgContainer">
             <h1>Bienvenido user</h1>
             <section class="LgInputsSection">
-                <input placeholder="Nombre">
-                <input placeholder="Contraseña">
+                <input id="NameInput" placeholder="Nombre">
+                <input id="PasswordInput" placeholder="Contraseña">
             </section>
             
             <section class="LgButtons">
-                <button>Continuar</button>
-                <button>Registrarse</button>
+                <button id="ContinueButton" onclick="window.location.href='/Articles'">Continuar</button>
+                <button id="RegisterButton">Registrarse</button>
             </section>
         </section>
     </section>
-    <!-- <h2>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
-    <h1 id="mensaje">Cargando...</h1>
-    <script>
-        // Llama al endpoint del backend
-        fetch('http://localhost:8080/hola')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('mensaje').textContent = data;
-            })
-            .catch(error => console.error('Errorrrrrrrr:', error));
-    </script> -->
 </body>
 </html>
