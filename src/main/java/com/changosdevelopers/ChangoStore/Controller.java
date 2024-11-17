@@ -3,6 +3,7 @@ package com.changosdevelopers.ChangoStore;
 import com.changosdevelopers.ChangoStore.Class.Articles;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,5 +29,11 @@ public class Controller {
         model.addAttribute("lista",articulos);
 
         return "pages/ArticlesPage";
+    }
+
+    @GetMapping("/ArticleSelected")
+    public String articleInfo(@PathVariable String name Model model){
+        Articles temp;
+        return "pages/ArticleInfo";
     }
 }
