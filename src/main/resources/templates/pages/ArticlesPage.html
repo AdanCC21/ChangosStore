@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="/css/articles.css" type="text/css">
 </head>
 <body>
-
+    <section class="HomeTopBar">
+        <h1>Top Bar</h1>
+    </section>
+    <main class="Table">
+        <div th:each="articulo : ${lista}" class="TableItem">
+            <img src="/assets/celular_triste.png">
+            <h3 th:text="${articulo.name}"></h3>
+            <p th:text="'Price ' + ${articulo.price}"></p>
+        </div>
+    </main>
 </body>
 </html>

@@ -12,7 +12,7 @@
     /* Num de columnas, tamaño en porcentaje al padre (25 del tamaño del padre) */
     grid-template-columns: repeat(4,25%);
     /* Size of rows */
-    grid-auto-rows: 10vh;
+    
 
     background-color: blue;
     /* Margin in, Top, left, button, right */
@@ -22,7 +22,13 @@
 
 .TableItem{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    
     align-items: center;
-    border: 5px solid yellow;
+    
+    border: 1px solid yellow;
+}
+
+.TableItem img{
+    max-width: 20%;
 }
