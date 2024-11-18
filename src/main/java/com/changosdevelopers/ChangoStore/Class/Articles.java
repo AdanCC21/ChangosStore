@@ -9,9 +9,12 @@ public class Articles {
         this.price = price;
     }
 
-    public String getName() {
-        return name;
+    public Articles(){
+        this.name="";
+        this.price=0.0;
     }
+
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;

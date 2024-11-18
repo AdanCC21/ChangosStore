@@ -20,12 +20,11 @@
             <section>
                 <img src="/assets/celular_triste.png">
             </section>
-            
-            
+
             <!-- Informacion -->
-            <main>
-                <h1>Titulo</h1>
-                <p>Descripcion</p>
+            <main th:each="articulo : ${articulo}" >
+                <h1 th:text="${articulo.name}">Titulo</h1>
+                <p th:text="${articulo.price}">Descripcion</p>
             </main>
         </div>
     </section>

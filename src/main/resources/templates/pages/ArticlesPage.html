@@ -18,8 +18,9 @@
         <input placeholder="Buscar Articulos">
         <img src="/assets/celular_triste.png">
     </section>
+
     <main class="Table">
-        <a th:each="articulo : ${lista}" class="TableItem" th:href="@{/Article/{ArticleSelected}">
+        <a th:each="articulo : ${listaArticulos}" class="TableItem" th:href="@{/article/{name}/{price}(name=${articulo.name}, price=${articulo.price})}" >
             <img src="/assets/celular_triste.png">
             <h3 th:text="${articulo.name}"></h3>
             <p th:text="'Price ' + ${articulo.price}"></p>
