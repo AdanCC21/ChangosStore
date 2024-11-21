@@ -1,18 +1,16 @@
-[
-  {
-    "name": "Camiseta",
-    "price": 20.5
-  },
-  {
-    "name": "Pantalón",
-    "price": 35.0
-  },
-  {
-    "name": "Zapatos",
-    "price": 50.0
-  },
-  {
-    "name": "Huevos",
-    "price": 1000.0
-  }
-]
+[ {
+  "name" : "Camiseta",
+  "price" : 20.5
+}, {
+  "name" : "Pantalón",
+  "price" : 35.0
+}, {
+  "name" : "Zapatos",
+  "price" : 50.0
+}, {
+  "name" : "Huevos",
+  "price" : 1000.0
+}, {
+  "name" : "Pantalón",
+  "price" : 35.0
+} ]

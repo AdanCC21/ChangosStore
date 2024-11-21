@@ -15,23 +15,21 @@
 </head>
 <body>
     <section class="TopBar">
-        <h1>CimaStore</h1>
-        <form>
-            <input type="text" id="articuloName" placeholder="Ingrese el nombre del artículo" />
-            <button type="button" onclick="window.location.href='/search/' + document.getElementById('articuloName').value">Enviar</button>
-        </form>
-
+        <a href="/Articles" style="color: white; text-decoration: none;">
+            <h1>CimaStore</h1>
+        </a>
+        <input placeholder="Buscar Articulos">
         <img src="/assets/celular_triste.png">
     </section>
 
+    <h1>Shop Car</h1>
     <main class="Table">
-        <a th:each="articulo : ${listaArticulos}" class="TableItem" th:href="@{/article/{name}/{price}(name=${articulo.name}, price=${articulo.price})}" >
+        <a class="TableItem" th:each="articulo : ${listaArticulos}" th:href="@{/article/{name}/{price}(name=${articulo.name}, price=${articulo.price})}">
             <img src="/assets/celular_triste.png">
-            <h3 th:text="${articulo.name}"></h3>
-            <p th:text="'Price ' + ${articulo.price}"></p>
+            <h1 th:text="${articulo.name}"></h1>
+            <p th:text="${articulo.price}"></p>
+            <a th:href="@{/delete/{name}(name=${articulo.name})}">Delete</a>
         </a>
     </main>
-
-    <button onclick="window.location.href='/car'">ShopCar</button>
 </body>
 </html>

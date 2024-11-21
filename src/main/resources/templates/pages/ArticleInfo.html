@@ -12,8 +12,17 @@
 
     <link rel="stylesheet" href="/css/styles.css" type="text/css">
     <link rel="stylesheet" href="/css/article.css" type="text/css">
+    <link rel="stylesheet" href="/css/topBar.css" type="text/css">
 </head>
 <body>
+    <section class="TopBar">
+        <a href="/Articles" style="color: white; text-decoration: none;">
+            <h1>CimaStore</h1>
+        </a>
+        <input placeholder="Buscar Articulos">
+        <img src="/assets/celular_triste.png">
+    </section>
+
     <!-- Base -->
     <section class="articleBase">
         <div class="articleInfo">
@@ -22,9 +31,11 @@
             </section>
 
             <!-- Informacion -->
-            <main th:each="articulo : ${articulo}" >
-                <h1 th:text="${articulo.name}">Titulo</h1>
-                <p th:text="${articulo.price}">Descripcion</p>
+            <main th:each="art : ${articulo}" >
+                <h1 th:text="${art.name}">Titulo</h1>
+                <p th:text="${art.price}">Descripcion</p>
+
+                <a th:href="@{/add/{name}/{price}(name=${art.name}, price=${art.price})}" style="color:white; text-decoration:none;">Agregar</a>
             </main>
         </div>
     </section>
